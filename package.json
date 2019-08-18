@@ -1,6 +1,6 @@
 {
   "name": "react2schema",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "main": "lib/index.js",
   "scripts": {
     "build": "npx babel src --out-dir lib"
@@ -20,8 +20,7 @@
     "babel-core": "^6.26.3",
     "babel-plugin-jsx-to-schema": "^0.1.9",
     "babel-preset-stage-0": "^6.24.1",
-    "babel-standalone": "^6.26.0",
-    "void-elements": "^3.1.0"
+    "babel-standalone": "^6.26.0"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",

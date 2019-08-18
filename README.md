@@ -13,9 +13,11 @@ npm i react2schema -S
 ## Usage
 
 ```
-import react2schema from 'react2schema';
+const react2schema = require('react2schema');
+console.log(react2schema(getCode()));
 
-const html = `import React, { Component } from 'react';
+function getCode(){
+  return `import React, { Component } from 'react';
 
 export default class About extends Component {
   static displayName = 'About';
@@ -196,6 +198,7 @@ const styles = {
   },
 };
 `;
+}
 ```
 
 output json below
