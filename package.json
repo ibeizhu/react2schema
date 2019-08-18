@@ -1,0 +1,43 @@
+{
+  "name": "react2schema",
+  "version": "0.0.1",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "npx babel src --out-dir lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ibzjs/react2schema.git"
+  },
+  "author": "beizhu <ibeizhu@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ibzjs/react2schema/issues"
+  },
+  "homepage": "https://github.com/ibzjs/react2schema#readme",
+  "keywords": ["react2schema", "schema"],
+  "dependencies": {
+    "babel-core": "^6.26.3",
+    "babel-plugin-jsx-to-schema": "^0.1.9",
+    "babel-preset-stage-0": "^6.24.1",
+    "babel-standalone": "^6.26.0",
+    "void-elements": "^3.1.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "husky": "^1.3.1",
+    "lint-staged": "^8.1.5"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{jsx,js,json,css,less,scss}": ["prettier --write", "git add"]
+  },
+  "directories": {
+    "lib": "lib"
+  }
+}
