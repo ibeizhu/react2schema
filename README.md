@@ -13,7 +13,10 @@ npm i react2schema -S
 ## Usage
 
 ```
-const react2schema = require('react2schema');
+// nodejs env
+const react2schema = require('react2schema/lib/node');
+// web env
+// const react2schema = require('react2schema/lib/web');
 console.log(react2schema(getCode()));
 
 function getCode(){

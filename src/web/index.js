@@ -3,10 +3,20 @@
  */
 'use strict';
 
-import jsxToSchemaPlugin from 'babel-plugin-jsx-to-schema';
-import stage0 from 'babel-preset-stage-0';
-import babel from 'babel-standalone';
-import { toJson } from '../util';
+const jsxToSchemaPlugin = require('babel-plugin-jsx-to-schema');
+const stage0 = require('babel-preset-stage-0');
+const babel = require('babel-standalone');
+
+function toJson(code) {
+  try {
+    let input = '[' + code + ']';
+    let str = JSON.stringify(eval(input));
+    return str.slice(1, str.length - 1);
+  } catch (e) {
+    console.error(e);
+    return code;
+  }
+}
 
 const react2schema = jsxCode => {
   const ast = babel.transform(jsxCode, {
